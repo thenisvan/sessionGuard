@@ -57,6 +57,7 @@ Version 1.1.15 · Author: Denis Ivan
 11. [Troubleshooting & FAQ](#troubleshooting--faq)
 12. [Developer Guide](#developer-guide)
 13. [Appendix](#appendix)
+14. [License](#license)
 
 ---
 
@@ -398,6 +399,12 @@ Confirm filters (scope/method/filetype) don’t exclude traffic; ensure you are 
 - Detailed per-session status panel with validation/renewal
 - Request replay via context menu
 - Table filters, search, and export
+
+---
+
+## License
+
+This project is licensed under the MIT License. See `LICENSE` for details.
 - Start/Stop controls for the analyzer
 - Scope restriction and duplicate header filtering
 - Auto-save, load/save configuration
