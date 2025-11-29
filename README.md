@@ -202,7 +202,7 @@ make build    # wraps: mvn clean package
 2. Add session headers or cookies to replace
 3. Define tokens (e.g., `SESSIONID`, `csrfToken`) and extraction methods
 4. Optionally enable Session Monitoring with a validation URL
-![Main Panel Overview](_assets/Pasted image 20251129205934.png)
+![Main Panel Overview](_assets/Pasted%20image%2020251129205934.png)
 _Caption: Creating sessions, adding headers/tokens, enabling monitoring._
 
 ---
@@ -241,22 +241,22 @@ Heuristics classify results as:
 
 ### Main Panel Overview
 
-![Main Panel Overview](_assets/Pasted image 20251129205934.png)
+![Main Panel Overview](_assets/Pasted%20image%2020251129205934.png)
 _Caption: Analyzer controls, session list, filters, and results table._
 
 ### Session Management Panel
 
-![Session Management Panel](_assets/Pasted image 20251129210041.png)
+![Session Management Panel](_assets/Pasted%20image%2020251129210041.png)
 _Caption: Define headers, tokens, extraction rules, and scope._
 
 ### Session Monitoring Panel
 
-![Session Monitoring Panel](_assets/Pasted image 20251129210106.png)
+![Session Monitoring Panel](_assets/Pasted%20image%2020251129210106.png)
 _Caption: Configure validation URL, expected status, macro selection, and view status chips._
 
 ### Results Table & Analysis
 
-![Results Table & Analysis](_assets/Pasted image 20251129210122.png)
+![Results Table & Analysis](_assets/Pasted%20image%2020251129210122.png)
 _Caption: Status (SAME/SIMILAR/DIFFERENT), filters, and export options._
 
 ---
@@ -270,11 +270,11 @@ Extracts when a response contains:
 - HTML `<input name="<name>" value="...">`
 - JSON `{ "<name>": "value" }`
 
-![Auto Extract Configuration](_assets/Pasted image 20251129210255.png)
+![Auto Extract Configuration](_assets/Pasted%20image%2020251129210255.png)
 _Caption: Auto extract locations configuration._
 
 ### Static Values
-![Static Values](_assets/Pasted image 20251129210228.png)
+![Static Values](_assets/Pasted%20image%2020251129210228.png)
 Use for constants like static CSRF tokens, usernames, etc.
 
 ### Replacement Locations
@@ -286,11 +286,11 @@ Supported insertion points:
 - Form-URL-Encoded or Multipart body
 - JSON body keys
 
-![Replacement Locations](_assets/Pasted image 20251129210352.png)
+![Replacement Locations](_assets/Pasted%20image%2020251129210352.png)
 _Caption: Choose where a token should be replaced._
 
 ### Parameter Removal
-![Parameter Removal](_assets/Pasted image 20251129210445.png)
+![Parameter Removal](_assets/Pasted%20image%2020251129210445.png)
 Remove selected parameters/headers.
 
 ---
@@ -298,13 +298,13 @@ Remove selected parameters/headers.
 ## Session Monitoring & Renewal
 
 ### Session Validation Configuration
-![Session Validation Configuration](_assets/Pasted image 20251129213005.png)
+![Session Validation Configuration](_assets/Pasted%20image%2020251129213005.png)
 Configure a periodic health check per session:
 - Method, URL, headers, body
 - Success criteria: status code, body substring, or regex
 
 ### Renewal Macros
-![Renewal Macros](_assets/Pasted image 20251129213038.png)
+![Renewal Macros](_assets/Pasted%20image%2020251129213038.png)
 Define named, multi-step HTTP flows to renew expired sessions (e.g., login sequence). Steps can extract tokens from responses.
 
 ### Macro Steps & Placeholders
@@ -320,7 +320,7 @@ Connection: keep-alive
 {"email":"[[email]]","password":"[[password]]"}
 ```
 
-![Macro Steps & Placeholders](_assets/Pasted image 20251129213110.png)
+![Macro Steps & Placeholders](_assets/Pasted%20image%2020251129213110.png)
 _Caption: Macro steps with headers, body, and placeholders._
 
 ### Validation States & Lifecycle
