@@ -9,8 +9,6 @@ Version 1.1.15 · Author: Denis Ivan
 
 - Docs Index: [`docs/README.md`](docs/README.md)
 - Quick Start: [`docs/quick-start.md`](docs/quick-start.md)
-- Screenshot Checklist: [`docs/screenshot-checklist.md`](docs/screenshot-checklist.md)
-- Diagrams: [`docs/diagrams.md`](docs/diagrams.md)
 
 ## Table of Contents
 
@@ -68,8 +66,6 @@ Version 1.1.15 · Author: Denis Ivan
 
 SessionGuard Analyzer is a Burp Suite extension that discovers authorization vulnerabilities and session security issues by replicating requests across user sessions, monitoring session health, and analyzing response differences. It automates multi-role testing and reduces manual effort while keeping sessions valid via self-healing renewal macros.
 
-![Screenshot Placeholder — Main Interface](docs/images/placeholder-main-ui.png)
-_Caption: Main SessionGuard interface with session list, analyzer controls, results table, and diff view._
 
 ### Key Capabilities
 
@@ -86,7 +82,7 @@ _Caption: Main SessionGuard interface with session list, analyzer controls, resu
 - Zero preflight: operates on your natural browsing traffic
 - Dynamic token discovery and replacement with minimal setup
 - Self-healing sessions keep long test runs reliable
-- Placeholder system for macro steps: `{{tokenName}}`
+- Placeholder system for macro steps: `[[tokenName]]`
 - Real-time, multi-role analysis with status chips and filters
 
 ---
@@ -206,7 +202,7 @@ make build    # wraps: mvn clean package
 2. Add session headers or cookies to replace
 3. Define tokens (e.g., `SESSIONID`, `csrfToken`) and extraction methods
 4. Optionally enable Session Monitoring with a validation URL
-![[_assets/Pasted image 20251129205934.png]]
+![](_assets/Pasted image 20251129205934.png)
 _Caption: Creating sessions, adding headers/tokens, enabling monitoring._
 
 ---
@@ -245,22 +241,22 @@ Heuristics classify results as:
 
 ### Main Panel Overview
 
-![[_assets/Pasted image 20251129205934.png]]
+![](_assets/Pasted image 20251129205934.png)
 _Caption: Analyzer controls, session list, filters, and results table._
 
 ### Session Management Panel
 
-![[_assets/Pasted image 20251129210041.png]]
+![](_assets/Pasted image 20251129210041.png)
 _Caption: Define headers, tokens, extraction rules, and scope._
 
 ### Session Monitoring Panel
 
-![[_assets/Pasted image 20251129210106.png]]
+![](_assets/Pasted image 20251129210106.png)
 _Caption: Configure validation URL, expected status, macro selection, and view status chips._
 
 ### Results Table & Analysis
 
-![[_assets/Pasted image 20251129210122.png]]
+![](_assets/Pasted image 20251129210122.png)
 _Caption: Status (SAME/SIMILAR/DIFFERENT), filters, and export options._
 
 ---
@@ -274,11 +270,11 @@ Extracts when a response contains:
 - HTML `<input name="<name>" value="...">`
 - JSON `{ "<name>": "value" }`
 
-![[_assets/Pasted image 20251129210255.png]]
+![](_assets/Pasted image 20251129210255.png)
 _Caption: Auto extract locations configuration._
 
 ### Static Values
-![[_assets/Pasted image 20251129210228.png]]
+![](_assets/Pasted image 20251129210228.png)
 Use for constants like static CSRF tokens, usernames, etc.
 
 ### Replacement Locations
@@ -290,11 +286,11 @@ Supported insertion points:
 - Form-URL-Encoded or Multipart body
 - JSON body keys
 
-![[_assets/Pasted image 20251129210352.png]]
+![](_assets/Pasted image 20251129210352.png)
 _Caption: Choose where a token should be replaced._
 
 ### Parameter Removal
-![[_assets/Pasted image 20251129210445.png]]
+![](_assets/Pasted image 20251129210445.png)
 Remove selected parameters/headers.
 
 ---
@@ -302,13 +298,13 @@ Remove selected parameters/headers.
 ## Session Monitoring & Renewal
 
 ### Session Validation Configuration
-![[_assets/Pasted image 20251129213005.png]]
+![](_assets/Pasted image 20251129213005.png)
 Configure a periodic health check per session:
 - Method, URL, headers, body
 - Success criteria: status code, body substring, or regex
 
 ### Renewal Macros
-![[_assets/Pasted image 20251129213038.png]]
+![](_assets/Pasted image 20251129213038.png)
 Define named, multi-step HTTP flows to renew expired sessions (e.g., login sequence). Steps can extract tokens from responses.
 
 ### Macro Steps & Placeholders
@@ -324,7 +320,7 @@ Connection: keep-alive
 {"email":"[[email]]","password":"[[password]]"}
 ```
 
-![[_assets/Pasted image 20251129213110.png]]
+![](_assets/Pasted image 20251129213110.png)
 _Caption: Macro steps with headers, body, and placeholders._
 
 ### Validation States & Lifecycle
@@ -498,8 +494,8 @@ This example demonstrates setting up automatic session validation and renewal fo
 
 ### Advanced: Using Placeholders in Macros
 For dynamic values in renewal macros, use placeholders:
-- `{{tokenName}}`: Replaced with current token value
-- Example in macro body: `csrf={{csrfToken}}&user={{username}}`
+- `[[tokenName]]`: Replaced with current token value
+- Example in macro body: `&user=[[username]]`
 - Tokens must be defined in the session's parameter list
 
 ### Troubleshooting
