@@ -1,0 +1,19 @@
+target/
+backlog.txt
+debug.log
+.settings/
+.project
+.classpath
+
+# macOS
+.DS_Store
+*.DS_Store
+
+# Temporary files
+*.zip
+*_old.png
+
+# IDE
+.idea/
+*.iml
+.vscode/
